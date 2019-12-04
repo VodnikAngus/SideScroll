@@ -1,0 +1,14 @@
+@import "imports/colors";
+@import "imports/sizes";
+@import "imports/mixins";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Lato', sans-serif;
+}
+
+.material-icons, img {
+    @include unselectable;
+}

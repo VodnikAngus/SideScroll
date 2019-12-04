@@ -1,0 +1,72 @@
+@import "imports/colors";
+
+.burger {
+  --height: inherit;
+  height: var(--height);
+  width: calc(1.2 * var(--height));
+  $height: calc(var(--height) / 5);
+  cursor: pointer;
+  position: relative;
+
+  div {
+    transition: all .1s ease-in;
+    height: $height;
+    background-color: $color-fg;
+    border-radius: 10000px;
+
+    &:nth-child(1) {
+      transform-origin: left;
+      transform: scaleX(1);
+    }
+
+    &:nth-child(2) {
+      transform: translateY(100%);
+    }
+
+    &:nth-child(3) {
+      transform-origin: right;
+      transform: translateY(200%);
+    }
+  }
+
+  &.active {
+    div {
+      &:nth-child(1) {
+        transform: translateY(200%);
+      }
+
+      &:nth-child(3) {
+        transform: translateY(0%);
+      }
+    }
+  }
+}
+
+@media (hover: hover) {
+  .burger {
+    &:hover div,
+    &:focus div {
+      background-color: $color-fg-focus;
+
+      &:nth-child(1) {
+        transform: scaleX(0.8);
+      }
+
+      &:nth-child(3) {
+        transform: translateY(200%) scaleX(0.8);
+      }
+    }
+
+    &.active {
+      div {
+        &:nth-child(1) {
+          transform: scaleX(0.8) translateY(200%);
+        }
+
+        &:nth-child(3) {
+          transform: scaleX(0.8) translateY(0%);
+        }
+      }
+    }
+  }
+}

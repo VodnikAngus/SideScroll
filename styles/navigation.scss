@@ -1,0 +1,56 @@
+@import "imports/colors";
+@import "imports/sizes";
+nav {
+    position: fixed;
+    left:0;
+    top:0;
+    z-index: 100;
+    height: 100%;
+    width: $sidebar-width;
+    background-color: $color-bg;
+    color: $color-fg;
+    // transition: all .1s ease-in;
+
+    & > .burger {
+        margin: 1rem;
+        --height: 1.666rem;
+        opacity: calc(1 - var(--nav-opacity));
+    }
+
+    ul {
+        height: calc(100% - 8rem);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    li {
+        font-size: 2rem;
+        list-style: none;
+        padding: 1rem;
+        transform-origin: left center;
+        transition: all .1s ease-in;
+        &:hover {
+            background-color: $color-bg-focus;
+            box-shadow: 5px 5px 5px rgba(0, 0, 0, .15);
+            transform: scale(1.1);
+            
+            width: $sidebar-width;
+            span {
+                opacity: 1;
+            }
+        }
+    }
+    a {
+        display: flex;
+        align-items: center;
+        color: $color-fg;
+        text-decoration: none;
+        .material-icons {
+            font-size: 2rem;
+            margin-right: 1rem;
+        }
+        span {
+            opacity: var(--nav-opacity);
+        }
+    }
+}

@@ -1,0 +1,50 @@
+.burger {
+  --height: inherit;
+  height: var(--height);
+  width: calc(1.2 * var(--height));
+  cursor: pointer;
+  position: relative;
+}
+.burger div {
+  transition: all 0.1s ease-in;
+  height: calc(var(--height) / 5);
+  background-color: #fff;
+  border-radius: 10000px;
+}
+.burger div:nth-child(1) {
+  transform-origin: left;
+  transform: scaleX(1);
+}
+.burger div:nth-child(2) {
+  transform: translateY(100%);
+}
+.burger div:nth-child(3) {
+  transform-origin: right;
+  transform: translateY(200%);
+}
+.burger.active div:nth-child(1) {
+  transform: translateY(200%);
+}
+.burger.active div:nth-child(3) {
+  transform: translateY(0%);
+}
+
+@media (hover: hover) {
+  .burger:hover div, .burger:focus div {
+    background-color: #eeeeee;
+  }
+  .burger:hover div:nth-child(1), .burger:focus div:nth-child(1) {
+    transform: scaleX(0.8);
+  }
+  .burger:hover div:nth-child(3), .burger:focus div:nth-child(3) {
+    transform: translateY(200%) scaleX(0.8);
+  }
+  .burger.active div:nth-child(1) {
+    transform: scaleX(0.8) translateY(200%);
+  }
+  .burger.active div:nth-child(3) {
+    transform: scaleX(0.8) translateY(0%);
+  }
+}
+
+/*# sourceMappingURL=burger.css.map */
