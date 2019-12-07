@@ -3,8 +3,6 @@ const vw = v => (v / 100) * Math.max(document.documentElement.clientWidth, windo
 const rem = num => num * parseFloat(getComputedStyle(document.documentElement).fontSize);
 const map = (num, in_min, in_max, out_min, out_max) => (num - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
 const anim = (val, min, max, minR, maxR) => map((val < max) ? val : max, min, max, minR, maxR);
-
-
 const animate = () => {
     nav.style.width = anim(window.scrollY, 0, vw(25), 300, rem(4)) + "px";
     nav.style.setProperty("--nav-opacity", anim(window.scrollY, 0, vw(12.5), 1, 0));

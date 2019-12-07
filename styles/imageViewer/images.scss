@@ -1,46 +1,79 @@
+@import "../imports/colors";
+@import "../imports/sizes";
+
+body {
+  background-color: $color-bg;
+}
+
 .view {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   position: fixed;
-  height: 300px;
-  width: 500px;
+  width: 90vw;
+  height: 90vh;
   top: 50%;
   left: 50%;
-  border: rgb(119, 119, 119) 1px solid;
   border-radius: 16px;
   transform: translate(-50%, -50%);
+  background: $color-bg-focus;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, .3);
 
   .material-icons {
-    font-size: 3rem;
+    padding: 1rem;
+    font-size: 5rem;
+    color: $color-fg;
   }
 
   #images {
+    transition: all .2s ease;
     position: relative;
-    width: 300px;
-    height: 200px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: calc(100% - 14rem);
+    max-height: calc(100% - 200px);
+
     img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+      z-index: 100;
       border-radius: 8px;
-      transition: opacity 0.2s ease;
+      transition: all .4s ease;
       position: absolute;
       top: 0;
       left: 0;
+      right: 0;
+      bottom: 0;
+      pointer-events: none;
     }
   }
+}
 
-  #plavaSmrtovnica {
-    display: flex;
-    position: absolute;
-    bottom: -40px;
-    right: -40px;
-    flex-direction: row-reverse;
-    z-index: 300;
-    div {
-      width: 30px;
-      height: 30px;
-      border-radius: 8px;
-      border: black 2px solid;
-      margin-left: 10px;
-    }
+#plavaSmrtovnica {
+  display: flex;
+  position: absolute;
+  bottom: 40px;
+  right: 40px;
+  flex-direction: row-reverse;
+  z-index: 300;
+  div {
+    transition: all .4s ease;
+    width: 30px;
+    height: 30px;
+    border-radius: 8px;
+    border: $color-fg 2px solid;
+    background: $color-fg;
+    margin-left: 10px;
   }
+}
+
+#brick {
+  max-width: calc(100% - 14rem);
+  max-height: calc(100% - 200px);
+
+  position: absolute;
+  pointer-events: none;
 }

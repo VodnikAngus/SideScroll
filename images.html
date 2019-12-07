@@ -12,12 +12,12 @@
     />
     <title>Image Viewer</title>
   </head>
-  <body onload="imageLoad()">
-    <div class="view">
+  <body onload="imageLoad()" onresize="respectMax()">
+    <div id="view" class="view">
       <i class="material-icons" onclick="changeLeft()">keyboard_arrow_left</i>
-      <div id="images">
-        <div id="plavaSmrtovnica"></div>
-      </div>
+      <div id="brick"></div>
+      <div id="images"></div>
+      <div id="plavaSmrtovnica"></div>
       <i class="material-icons" onclick="changeRight()">keyboard_arrow_right</i>
     </div>
     <script src="./scripts/images.js"></script>

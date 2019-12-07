@@ -1,11 +1,1 @@
-{
-  "version": 3,
-  "sourceRoot": "",
-  "sources": [
-    "global.scss",
-    "imports/_mixins.scss"
-  ],
-  "names": [],
-  "mappings": "AAIA;EACE;EACA;EACA;EACA;EAEA;EACA;;;AAGF;ECbE;EACA;EACA;EACA;EACA",
-  "file": "global.css"
-}
+{"version":3,"sourceRoot":"","sources":["global.scss","imports/_mixins.scss"],"names":[],"mappings":"AAIA;EACE;EACA;EACA;EACA;;;AAGF;ECVE;EACA;EACA;EACA;EACA","file":"global.css"}
