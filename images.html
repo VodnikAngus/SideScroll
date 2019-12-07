@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="styles/global.css" />
+    <link rel="stylesheet" href="styles/imageViewer/images.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <title>Image Viewer</title>
+  </head>
+  <body onload="imageLoad()">
+    <div class="view">
+      <i class="material-icons" onclick="changeLeft()">keyboard_arrow_left</i>
+      <div id="images">
+        <div id="plavaSmrtovnica"></div>
+      </div>
+      <i class="material-icons" onclick="changeRight()">keyboard_arrow_right</i>
+    </div>
+    <script src="./scripts/images.js"></script>
+  </body>
+</html>

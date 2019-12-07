@@ -1,0 +1,45 @@
+.view {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  height: 300px;
+  width: 500px;
+  top: 50%;
+  left: 50%;
+  border: #777777 1px solid;
+  border-radius: 16px;
+  transform: translate(-50%, -50%);
+}
+.view .material-icons {
+  font-size: 3rem;
+}
+.view #images {
+  position: relative;
+  width: 300px;
+  height: 200px;
+}
+.view #images img {
+  border-radius: 8px;
+  transition: opacity 0.2s ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.view #plavaSmrtovnica {
+  display: flex;
+  position: absolute;
+  bottom: -40px;
+  right: -40px;
+  flex-direction: row-reverse;
+  z-index: 300;
+}
+.view #plavaSmrtovnica div {
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+  border: black 2px solid;
+  margin-left: 10px;
+}
+
+/*# sourceMappingURL=images.css.map */
